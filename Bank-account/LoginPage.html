@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <meta charset = "utf-8">
+    <head>
+        <title>NJIT Student Bank</title>
+        
+    </head>
+    <body>
+        <form action="./login.php" method = "GET" autocomplete = "off">
+            Username <input type = "text" id = "username" placeholder = "username" name ="username" required>
+            <br><br>
+            Password <input type = "password" id = "password" placeholder = "password" name="password" required>
+            <br><br>
+            <div style = "display:none;"> Pin <input type = "text" name = "pin" placeholder = "pin"></div>
+            <br><br>
+            Account <input type = "text" id = "account" placeholder = "account" name="account">
+            <br><br>
+            Service
+            <select id = "service" name="service">
+                <option value = "default" selected></option>
+                <option value ="see">See</option>
+                <option value ="alter">alter</option>
+                <option value ="transact">transact</option>
+                <option value ="clear">clear</option>
+            </select>
+            <br><br>
+            <!-- Field for transactions-->
+           <div id = "transact" style = "display:none;"> Amount <input type = "text" name = "amount" placeholder = "amount" ></div>
+            <!--Fields for altering values-->
+            <div id = "alter" style = "display:none;">
+            New Email <input type = "text" name = "email" class = "alter" placeholder = "email"> <br><br>
+            New Password <input type = "password" name = "newPass" class = "alter" placeholder = "password"> <br><br>
+            Column <input type ="text" name="col" class = "alter" placeholder = "password or email"> 
+            </div>
+            <br>
+            <input type="submit" value="submit"> 
+            
+        </form>
+        <script src="./login.js"></script>
+    </body>
+</html>
